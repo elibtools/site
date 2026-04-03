@@ -1,0 +1,5 @@
+# Ignore the HTML template
+temp_site.html
+
+# Ignore the Python automation script
+make_site.py
