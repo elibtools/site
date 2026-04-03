@@ -4,146 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - elib PDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1a73e8;
-            --text-color: #3c4043;
-            --heading-color: #202124;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
+            --primary: #1a73e8;
+            --primary-container: #e8f0fe;
+            --surface: #f8f9fa;
+            --on-surface: #1d1b20;
+            --on-surface-variant: #49454f;
+            --outline: #e0e0e0;
+            --white: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            color: var(--on-surface-variant);
+            background-color: var(--surface);
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 40px auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 0 20px;
         }
 
-        h1 { color: var(--heading-color); font-size: 2.2rem; margin-bottom: 10px; }
-        .effective-date { color: #70757a; font-size: 0.95rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
+        /* Premium Header Section */
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--on-surface);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .effective-date {
+            display: inline-block;
+            color: #6750A4;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+        }
+
+        /* Info Card Style (from NavPrivacy infoCard) */
+        .info-card {
+            background: var(--white);
+            border: 1px solid var(--outline);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            margin-bottom: 40px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .info-row span:first-child { color: #938F99; }
+        .info-row span:last-child { color: var(--on-surface); font-weight: 500; text-align: right; }
+
+        /* Section Cards (matches createPremiumCard) */
+        .premium-card {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        /* Subheading formatting (from processFormatting ##) */
+        .subheading {
+            display: block;
+            font-weight: 700;
+            color: var(--on-surface);
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        p { margin-bottom: 12px; font-size: 0.95rem; }
         
-        .info-box {
-            background: #e8f0fe;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 5px solid var(--primary-color);
+        ul { padding-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; font-size: 0.95rem; }
+
+        .link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        h2 { color: var(--primary-color); font-size: 1.5rem; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        h3 { font-size: 1.2rem; color: var(--heading-color); margin-top: 25px; }
-        p, li { font-size: 1.05rem; margin-bottom: 15px; }
-        ul { padding-left: 20px; }
-        .link { color: var(--primary-color); text-decoration: none; word-break: break-all; }
-        hr { border: 0; height: 1px; background: #eee; margin: 40px 0; }
+        hr { border: 0; height: 1px; background: var(--outline); margin: 40px 0; }
 
         @media (max-width: 600px) {
-            .container { margin: 0; padding: 20px; border-radius: 0; }
             h1 { font-size: 1.8rem; }
+            .premium-card { padding: 24px; border-radius: 20px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <p>Terms of Use and Legal Policy</p>
-<p>Application Name: elib PDF</p>
-<p>Developer: Thurapsha kaja K S (elibtools)</p>
-<p>Contact: <a class='link' href='mailto:elibtools@gmail.com'>elibtools@gmail.com</a></p>
-<p class="effective-date">Effective Date: [MARCH 2026]</p>
-<p>This document defines the legal terms governing the use of the elib PDF mobile application. By installing or using this application, you agree to the following terms.</p>
-<hr>
-<h2>1. Acceptance of Terms</h2>
-<p>By accessing or using this application, you agree to comply with these Terms of Use and all applicable laws and regulations. If you do not agree with any part of these terms, you should discontinue use of the application immediately.</p>
-<hr>
-<h2>2. Application Purpose</h2>
-<p>elib PDF is a professional offline suite designed to provide users with high-performance tools for document orchestration.</p>
+    <header>
+        <span class="effective-date">Effective: [MARCH 2026]</span>
+        <h1>Terms of Use</h1>
+        <p>Terms of Use and Legal Policy</p>
+    </header>
+
+    <div class="info-card">
+        <div class="info-row"><span>Application</span><span>elib PDF</span></div>
+        <div class="info-row"><span>Developer</span><span>Thurapsha kaja K S</span></div>
+        <div class="info-row"><span>Contact</span><span><a href="mailto:elibtools@gmail.com" class="link">elibtools@gmail.com</a></span></div>
+    </div>
+
+    <div class="content">
+        
+            <div class="premium-card">
+                <h2>1. Acceptance of Terms</h2>
+                <div class="card-body">
+                    <p>By accessing or using this application, you agree to comply with these Terms of Use and all applicable laws and regulations. If you do not agree with any part of these terms, you should discontinue use of the application immediately.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>2. Application Purpose</h2>
+                <div class="card-body">
+                    <p>elib PDF is a professional offline suite designed to provide users with high-performance tools for document orchestration.</p>
 <p>The application includes features such as:</p>
-<p>* PDF merging with custom sequencing (drag-and-drop logic)</p>
-<p>* PDF splitting (Range, Fixed, or Equal parts extraction)</p>
-<p>* PDF compression (Advanced multi-level optimization)</p>
-<p>* Image to PDF conversion (Supporting A4, Letter, and Legal formats)</p>
-<p>* PDF to Image extraction (High-definition PNG/JPG)</p>
-<p>* PDF metadata administration (Title, Author, Subject, Keywords)</p>
-<p>* Professional Watermarking (Text and Image overlays)</p>
-<p>* Automated Pagination (15+ industry styles)</p>
-<p>* Security Management (Password protection and decryption)</p>
-<p>* Document Organization (Rotate, Delete, or Append pages)</p>
+<ul><li>PDF merging with custom sequencing (drag-and-drop logic)</li></ul>
+<ul><li>PDF splitting (Range, Fixed, or Equal parts extraction)</li></ul>
+<ul><li>PDF compression (Advanced multi-level optimization)</li></ul>
+<ul><li>Image to PDF conversion (Supporting A4, Letter, and Legal formats)</li></ul>
+<ul><li>PDF to Image extraction (High-definition PNG/JPG)</li></ul>
+<ul><li>PDF metadata administration (Title, Author, Subject, Keywords)</li></ul>
+<ul><li>Professional Watermarking (Text and Image overlays)</li></ul>
+<ul><li>Automated Pagination (15+ industry styles)</li></ul>
+<ul><li>Security Management (Password protection and decryption)</li></ul>
+<ul><li>Document Organization (Rotate, Delete, or Append pages)</li></ul>
 <p>All document processing occurs locally on the user’s device via an offline-first architecture.</p>
-<hr>
-<h2>3. Intellectual Property Rights</h2>
-<p>All intellectual property rights related to this application are owned by the developer Thurapsha kaja K S, except for third-party open-source components listed below.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>3. Intellectual Property Rights</h2>
+                <div class="card-body">
+                    <p>All intellectual property rights related to this application are owned by the developer Thurapsha kaja K S, except for third-party open-source components listed below.</p>
 <p>This includes but is not limited to:</p>
-<p>* Application design and the "elib PDF" brand</p>
-<p>* Source code and tool logic (including Task ID configurations)</p>
-<p>* User interface components and visual assets</p>
-<p>* Proprietary algorithms for document orchestration</p>
+<ul><li>Application design and the "elib PDF" brand</li></ul>
+<ul><li>Source code and tool logic (including Task ID configurations)</li></ul>
+<ul><li>User interface components and visual assets</li></ul>
+<ul><li>Proprietary algorithms for document orchestration</li></ul>
 <p>Unauthorized copying, distribution, modification, or resale of the application is strictly prohibited.</p>
-<hr>
-<h2>4. Restrictions on Use</h2>
-<p>Users are not permitted to:</p>
-<p>* Reverse engineer, decompile, or disassemble the application</p>
-<p>* Modify the application code or extract proprietary tool logic</p>
-<p>* Remove licensing, trademark, or copyright information</p>
-<p>* Attempt to bypass premium restrictions (Pro, Ads-free, or Batch tiers)</p>
-<p>* Attempt to crack or unlock paid features via third-party tools</p>
-<p>* Redistribute modified versions of the application (APKs)</p>
-<hr>
-<h2>5. Anti-Cracking and License Protection</h2>
-<p>The application contains mechanisms designed to protect premium features and prevent unauthorized access. Users must not attempt to modify licensing mechanisms, bypass Google Play Billing verification, or patch application binaries. Any attempt to bypass licensing systems may result in legal action and termination of service.</p>
-<hr>
-<h2>6. Prohibited Activities</h2>
-<p>Users agree not to use the application for illegal document manipulation, copyright infringement, or the distribution of unauthorized content. The developer is not responsible for the content of the files processed or how users utilize the generated documents.</p>
-<hr>
-<h2>7. Disclaimer of Warranty</h2>
-<p>The application is provided “as is” without warranties of any kind. The developer does not guarantee that the application will be error-free or function on all legacy devices. Users assume all risks associated with the processing of sensitive documents.</p>
-<hr>
-<h2>8. Limitation of Liability</h2>
-<p>To the maximum extent permitted by law, the developer shall not be liable for data loss, file corruption during compression/splitting, or indirect damages. Users are responsible for maintaining backups of original documents.</p>
-<hr>
-<h2>9. Open Source Software</h2>
-<p>This application includes components distributed under open-source licenses. The developer acknowledges and complies with the following:</p>
-<p>## Apache PDFBox (Android Port)</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>4. Restrictions on Use</h2>
+                <div class="card-body">
+                    <p>Users are not permitted to:</p>
+<ul><li>Reverse engineer, decompile, or disassemble the application</li></ul>
+<ul><li>Modify the application code or extract proprietary tool logic</li></ul>
+<ul><li>Remove licensing, trademark, or copyright information</li></ul>
+<ul><li>Attempt to bypass premium restrictions (Pro, Ads-free, or Batch tiers)</li></ul>
+<ul><li>Attempt to crack or unlock paid features via third-party tools</li></ul>
+<ul><li>Redistribute modified versions of the application (APKs)</li></ul>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>5. Anti-Cracking and License Protection</h2>
+                <div class="card-body">
+                    <p>The application contains mechanisms designed to protect premium features and prevent unauthorized access. Users must not attempt to modify licensing mechanisms, bypass Google Play Billing verification, or patch application binaries. Any attempt to bypass licensing systems may result in legal action and termination of service.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>6. Prohibited Activities</h2>
+                <div class="card-body">
+                    <p>Users agree not to use the application for illegal document manipulation, copyright infringement, or the distribution of unauthorized content. The developer is not responsible for the content of the files processed or how users utilize the generated documents.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>7. Disclaimer of Warranty</h2>
+                <div class="card-body">
+                    <p>The application is provided “as is” without warranties of any kind. The developer does not guarantee that the application will be error-free or function on all legacy devices. Users assume all risks associated with the processing of sensitive documents.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>8. Limitation of Liability</h2>
+                <div class="card-body">
+                    <p>To the maximum extent permitted by law, the developer shall not be liable for data loss, file corruption during compression/splitting, or indirect damages. Users are responsible for maintaining backups of original documents.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>9. Open Source Software</h2>
+                <div class="card-body">
+                    <p>This application includes components distributed under open-source licenses. The developer acknowledges and complies with the following:</p>
+<span class="subheading">Apache PDFBox (Android Port)</span>
 <p>Purpose: Core PDF manipulation and document processing</p>
 <p>License: Apache License 2.0</p>
-<p>## Bouncy Castle Cryptography</p>
+<span class="subheading">Bouncy Castle Cryptography</span>
 <p>Purpose: Secure encryption and password management</p>
 <p>License: MIT/Bouncy Castle License</p>
-<p>## iText (Legacy Support)</p>
+<span class="subheading">iText (Legacy Support)</span>
 <p>Purpose: Document structural preservation</p>
 <p>License: AGPL/LGPL (as applicable to the utilized port)</p>
-<p>## Apache Commons & SLF4J</p>
+<span class="subheading">Apache Commons & SLF4J</span>
 <p>Purpose: Internal logging and utility frameworks</p>
 <p>License: Apache License 2.0 / MIT</p>
-<hr>
-<h2>10. Third-Party Services</h2>
-<p>The application integrates with the following services:</p>
-<p>* Google Play Billing: For Pro, Ads-free, and Batch subscriptions</p>
-<p>* Google AdMob: For rewarded advertisements to unlock premium tools</p>
-<p>* Firebase Analytics & Crashlytics: For stability monitoring (v2.4 and above)</p>
-<hr>
-<h2>11. Updates to the Application</h2>
-<p>The developer may update the application periodically (e.g., Version 2.4+) to improve functionality, fix bugs, or add new tools. Continued use after updates constitutes acceptance of the updated terms.</p>
-<hr>
-<h2>12. Governing Law</h2>
-<p>These terms are governed by the laws and regulations relevant to the developer's jurisdiction.</p>
-<hr>
-<h2>13. Contact Information</h2>
-<p>For legal inquiries, licensing questions, or support:</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>10. Third-Party Services</h2>
+                <div class="card-body">
+                    <p>The application integrates with the following services:</p>
+<ul><li>Google Play Billing: For Pro, Ads-free, and Batch subscriptions</li></ul>
+<ul><li>Google AdMob: For rewarded advertisements to unlock premium tools</li></ul>
+<ul><li>Firebase Analytics & Crashlytics: For stability monitoring (v2.4 and above)</li></ul>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>11. Updates to the Application</h2>
+                <div class="card-body">
+                    <p>The developer may update the application periodically (e.g., Version 2.4+) to improve functionality, fix bugs, or add new tools. Continued use after updates constitutes acceptance of the updated terms.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>12. Governing Law</h2>
+                <div class="card-body">
+                    <p>These terms are governed by the laws and regulations relevant to the developer's jurisdiction.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>13. Contact Information</h2>
+                <div class="card-body">
+                    <p>For legal inquiries, licensing questions, or support:</p>
 <p>Developer: Thurapsha kaja K S</p>
-<p>Email: <a class='link' href='mailto:elibtools@gmail.com'>elibtools@gmail.com</a></p>
+<p>Email: <a class="link" href="mailto:elibtools@gmail.com">elibtools@gmail.com</a></p>
+                </div>
+            </div>
+    </div>
 </div>
 
 </body>

@@ -4,150 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - elib PDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1a73e8;
-            --text-color: #3c4043;
-            --heading-color: #202124;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
+            --primary: #1a73e8;
+            --primary-container: #e8f0fe;
+            --surface: #f8f9fa;
+            --on-surface: #1d1b20;
+            --on-surface-variant: #49454f;
+            --outline: #e0e0e0;
+            --white: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            color: var(--on-surface-variant);
+            background-color: var(--surface);
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 40px auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 0 20px;
         }
 
-        h1 { color: var(--heading-color); font-size: 2.2rem; margin-bottom: 10px; }
-        .effective-date { color: #70757a; font-size: 0.95rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
+        /* Premium Header Section */
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--on-surface);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .effective-date {
+            display: inline-block;
+            color: #6750A4;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+        }
+
+        /* Info Card Style (from NavPrivacy infoCard) */
+        .info-card {
+            background: var(--white);
+            border: 1px solid var(--outline);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            margin-bottom: 40px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .info-row span:first-child { color: #938F99; }
+        .info-row span:last-child { color: var(--on-surface); font-weight: 500; text-align: right; }
+
+        /* Section Cards (matches createPremiumCard) */
+        .premium-card {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        /* Subheading formatting (from processFormatting ##) */
+        .subheading {
+            display: block;
+            font-weight: 700;
+            color: var(--on-surface);
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        p { margin-bottom: 12px; font-size: 0.95rem; }
         
-        .info-box {
-            background: #e8f0fe;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 5px solid var(--primary-color);
+        ul { padding-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; font-size: 0.95rem; }
+
+        .link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        h2 { color: var(--primary-color); font-size: 1.5rem; margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        h3 { font-size: 1.2rem; color: var(--heading-color); margin-top: 25px; }
-        p, li { font-size: 1.05rem; margin-bottom: 15px; }
-        ul { padding-left: 20px; }
-        .link { color: var(--primary-color); text-decoration: none; word-break: break-all; }
-        hr { border: 0; height: 1px; background: #eee; margin: 40px 0; }
+        hr { border: 0; height: 1px; background: var(--outline); margin: 40px 0; }
 
         @media (max-width: 600px) {
-            .container { margin: 0; padding: 20px; border-radius: 0; }
             h1 { font-size: 1.8rem; }
+            .premium-card { padding: 24px; border-radius: 20px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <p>Privacy Policy</p>
-<p class="effective-date">Effective Date: [MARCH 2026]</p>
-<p>App Name: elib PDF</p>
-<p>Developer / Publisher: Thurapsha kaja K S (elibtools)</p>
-<p>Contact Email: <a class='link' href='mailto:elibtools@gmail.com'>elibtools@gmail.com</a></p>
-<p>This Privacy Policy explains how elib PDF collects, uses, and protects user information when using the mobile application.</p>
-<p>By using this application, you agree to the practices described in this policy.</p>
-<hr>
-<h2>1. Information We Collect</h2>
-<p>The application may collect the following categories of information.</p>
-<h2>1.1 Information You Provide</h2>
+    <header>
+        <span class="effective-date">Effective: [MARCH 2026]</span>
+        <h1>Privacy Policy</h1>
+        <p>Privacy Policy</p>
+    </header>
+
+    <div class="info-card">
+        <div class="info-row"><span>Application</span><span>elib PDF</span></div>
+        <div class="info-row"><span>Developer</span><span>Thurapsha kaja K S</span></div>
+        <div class="info-row"><span>Contact</span><span><a href="mailto:elibtools@gmail.com" class="link">elibtools@gmail.com</a></span></div>
+    </div>
+
+    <div class="content">
+        
+            <div class="premium-card">
+                <h2>1. Information We Collect</h2>
+                <div class="card-body">
+                    <p>The application may collect the following categories of information.</p>
+<p>1.1 Information You Provide</p>
 <p>The app allows users to open, edit, convert, or manage PDF documents stored on their device using advanced tools (Merge, Split, Watermark, etc.).</p>
 <p>These files are:</p>
-<p>* Selected by the user manually through the file picker interface.</p>
-<p>* Processed locally on the device using embedded libraries (including PDFBox).</p>
-<p>* Not uploaded to any external server.</p>
+<ul><li>Selected by the user manually through the file picker interface.</li></ul>
+<ul><li>Processed locally on the device using embedded libraries (including PDFBox).</li></ul>
+<ul><li>Not uploaded to any external server.</li></ul>
 <p>Examples include:</p>
-<p>* PDF documents for structural editing.</p>
-<p>* Images selected for high-definition PDF conversion.</p>
-<p>* Text/Images entered for watermarking or metadata management.</p>
+<ul><li>PDF documents for structural editing.</li></ul>
+<ul><li>Images selected for high-definition PDF conversion.</li></ul>
+<ul><li>Text/Images entered for watermarking or metadata management.</li></ul>
 <p>The application does not store or transmit these files externally.</p>
-<hr>
-<h2>2. File Access and Storage</h2>
-<p>To provide its professional suite functionality, the app requests specific permissions including READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, and MANAGE_EXTERNAL_STORAGE (where applicable for Android versions).</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>2. File Access and Storage</h2>
+                <div class="card-body">
+                    <p>To provide its professional suite functionality, the app requests specific permissions including READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, and MANAGE_EXTERNAL_STORAGE (where applicable for Android versions).</p>
 <p>These permissions allow the app to:</p>
-<p>* Open and render PDF files within the Viewer.</p>
-<p>* Save processed files (Compressed, Merged, or Converted) to your storage.</p>
-<p>* Manage media files for Image-to-PDF tasks.</p>
-<p>* Share generated files via system intents.</p>
+<ul><li>Open and render PDF files within the Viewer.</li></ul>
+<ul><li>Save processed files (Compressed, Merged, or Converted) to your storage.</li></ul>
+<ul><li>Manage media files for Image-to-PDF tasks.</li></ul>
+<ul><li>Share generated files via system intents.</li></ul>
 <p>All file processing occurs locally on the device. No document content is transmitted to the developer or third-party servers.</p>
-<hr>
-<h2>3. Local Data Storage</h2>
-<p>The application may store limited data locally on the device using SharedPreferences and internal app storage.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>3. Local Data Storage</h2>
+                <div class="card-body">
+                    <p>The application may store limited data locally on the device using SharedPreferences and internal app storage.</p>
 <p>This data may include:</p>
-<p>* App settings and UI preferences.</p>
-<p>* Premium feature status (Pro, Ads-free, or Batch access).</p>
-<p>* Temporary cache for PDF processing.</p>
-<p>* Tool-specific logic (e.g., custom split ranges or watermark styles).</p>
+<ul><li>App settings and UI preferences.</li></ul>
+<ul><li>Premium feature status (Pro, Ads-free, or Batch access).</li></ul>
+<ul><li>Temporary cache for PDF processing.</li></ul>
+<ul><li>Tool-specific logic (e.g., custom split ranges or watermark styles).</li></ul>
 <p>This information remains strictly on the user's device.</p>
-<hr>
-<h2>4. Advertising</h2>
-<p>The application uses Google AdMob to display advertisements, including Rewarded Ads to unlock premium features.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>4. Advertising</h2>
+                <div class="card-body">
+                    <p>The application uses Google AdMob to display advertisements, including Rewarded Ads to unlock premium features.</p>
 <p>AdMob may collect certain information automatically to serve relevant ads:</p>
-<p>* Device information and Advertising ID (AD_ID).</p>
-<p>* Interaction with advertisements.</p>
+<ul><li>Device information and Advertising ID (AD_ID).</li></ul>
+<ul><li>Interaction with advertisements.</li></ul>
 <p>For more information see:</p>
 <p>Google Privacy Policy: https://policies.google.com/privacy</p>
 <p>Users can reset or limit advertising tracking in their device settings.</p>
-<hr>
-<h2>5. Analytics</h2>
-<p>The application uses Google Firebase Analytics to understand how users interact with the professional tools.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>5. Analytics</h2>
+                <div class="card-body">
+                    <p>The application uses Google Firebase Analytics to understand how users interact with the professional tools.</p>
 <p>Firebase Analytics may collect information such as:</p>
-<p>* Tool usage statistics (e.g., which PDF tools are most used).</p>
-<p>* Device type and OS version.</p>
-<p>* Session duration and retention.</p>
+<ul><li>Tool usage statistics (e.g., which PDF tools are most used).</li></ul>
+<ul><li>Device type and OS version.</li></ul>
+<ul><li>Session duration and retention.</li></ul>
 <p>This information helps improve the application experience. Firebase Analytics does not collect personally identifiable information.</p>
-<hr>
-<h2>6. Crash Reporting</h2>
-<p>The application uses Firebase Crashlytics to detect and fix technical issues.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>6. Crash Reporting</h2>
+                <div class="card-body">
+                    <p>The application uses Firebase Crashlytics to detect and fix technical issues.</p>
 <p>Crash reports may include:</p>
-<p>* Device state and logs at the time of a crash.</p>
-<p>* App version (e.g., v2.4).</p>
+<ul><li>Device state and logs at the time of a crash.</li></ul>
+<ul><li>App version (e.g., v2.4).</li></ul>
 <p>No personal documents, file content, or sensitive PDF data are ever included in crash reports.</p>
-<hr>
-<h2>7. In-App Purchases & Rewarded Features</h2>
-<p>The application offers premium functionality (Pro, Ads, and Batch tiers) using Google Play Billing.</p>
-<p>* Purchases are processed securely by Google Play.</p>
-<p>* Rewarded Ads allow temporary access to premium tools.</p>
-<p>* The application does not collect or store credit card or payment information.</p>
-<hr>
-<h2>8. Third-Party Services</h2>
-<p>The application integrates the following services:</p>
-<p>* Google AdMob (Advertising)</p>
-<p>* Google Firebase Analytics (Performance Monitoring)</p>
-<p>* Google Firebase Crashlytics (Stability)</p>
-<p>* Google Play Billing (Subscriptions/One-time purchases)</p>
-<hr>
-<h2>9. Data Security</h2>
-<p>The application implements high-performance security measures to protect user data. Because elib PDF is an offline-first suite, all PDF manipulation occurs locally. Your documents never leave your device.</p>
-<hr>
-<h2>10. Children's Privacy</h2>
-<p>This application is not directed toward children under the age of 13. We do not knowingly collect personal information from children.</p>
-<hr>
-<h2>11. Changes to This Privacy Policy</h2>
-<p>This privacy policy may be updated periodically to reflect app updates (such as new tools or version changes). The effective date will be updated accordingly.</p>
-<hr>
-<h2>12. Contact Information</h2>
-<p>If you have questions about this privacy policy, you can contact:</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>7. In-App Purchases & Rewarded Features</h2>
+                <div class="card-body">
+                    <p>The application offers premium functionality (Pro, Ads, and Batch tiers) using Google Play Billing.</p>
+<ul><li>Purchases are processed securely by Google Play.</li></ul>
+<ul><li>Rewarded Ads allow temporary access to premium tools.</li></ul>
+<ul><li>The application does not collect or store credit card or payment information.</li></ul>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>8. Third-Party Services</h2>
+                <div class="card-body">
+                    <p>The application integrates the following services:</p>
+<ul><li>Google AdMob (Advertising)</li></ul>
+<ul><li>Google Firebase Analytics (Performance Monitoring)</li></ul>
+<ul><li>Google Firebase Crashlytics (Stability)</li></ul>
+<ul><li>Google Play Billing (Subscriptions/One-time purchases)</li></ul>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>9. Data Security</h2>
+                <div class="card-body">
+                    <p>The application implements high-performance security measures to protect user data. Because elib PDF is an offline-first suite, all PDF manipulation occurs locally. Your documents never leave your device.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>10. Children's Privacy</h2>
+                <div class="card-body">
+                    <p>This application is not directed toward children under the age of 13. We do not knowingly collect personal information from children.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>11. Changes to This Privacy Policy</h2>
+                <div class="card-body">
+                    <p>This privacy policy may be updated periodically to reflect app updates (such as new tools or version changes). The effective date will be updated accordingly.</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <h2>12. Contact Information</h2>
+                <div class="card-body">
+                    <p>If you have questions about this privacy policy, you can contact:</p>
 <p>Developer: Thurapsha kaja K S</p>
-<p>Email: <a class='link' href='mailto:elibtools@gmail.com'>elibtools@gmail.com</a></p>
+<p>Email: <a class="link" href="mailto:elibtools@gmail.com">elibtools@gmail.com</a></p>
+                </div>
+            </div>
+    </div>
 </div>
 
 </body>
