@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - elib PDF</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary: #1a73e8;
+            --primary-hover: #1557b0;
             --primary-container: #e8f0fe;
             --surface: #f8f9fa;
             --on-surface: #1d1b20;
@@ -31,16 +33,45 @@
             padding: 0 20px;
         }
 
-        /* Premium Header Section */
-        header {
-            margin-bottom: 40px;
+        /* Header Navigation */
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 32px;
         }
 
-        h1 {
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--white);
+            border: 1px solid var(--outline);
+            padding: 8px 16px;
+            border-radius: 12px;
+            color: var(--on-surface);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .home-btn i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        .home-btn:hover {
+            background: var(--primary-container);
+            border-color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        header h1 {
             color: var(--on-surface);
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin: 0 0 8px 0;
             letter-spacing: -0.02em;
         }
 
@@ -54,7 +85,7 @@
             margin-bottom: 24px;
         }
 
-        /* Info Card Style (from NavPrivacy infoCard) */
+        /* Info Card Style */
         .info-card {
             background: var(--white);
             border: 1px solid var(--outline);
@@ -74,14 +105,18 @@
         .info-row span:first-child { color: #938F99; }
         .info-row span:last-child { color: var(--on-surface); font-weight: 500; text-align: right; }
 
-        /* Section Cards (matches createPremiumCard) */
+        /* Content Area */
+        .content {
+            margin-top: 20px;
+        }
+
         .premium-card {
             background: var(--white);
             border-radius: 28px;
             padding: 32px;
             margin-bottom: 24px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            transition: transform 0.2s ease;
+            border: 1px solid rgba(0,0,0,0.02);
         }
 
         h2 {
@@ -92,7 +127,6 @@
             margin-bottom: 16px;
         }
 
-        /* Subheading formatting (from processFormatting ##) */
         .subheading {
             display: block;
             font-weight: 700;
@@ -102,7 +136,6 @@
         }
 
         p { margin-bottom: 12px; font-size: 0.95rem; }
-        
         ul { padding-left: 20px; margin-bottom: 15px; }
         li { margin-bottom: 8px; font-size: 0.95rem; }
 
@@ -112,26 +145,36 @@
             font-weight: 500;
         }
 
-        hr { border: 0; height: 1px; background: var(--outline); margin: 40px 0; }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.8rem;
+            color: #938F99;
+        }
 
         @media (max-width: 600px) {
+            .nav-header { flex-direction: column-reverse; gap: 16px; }
             h1 { font-size: 1.8rem; }
-            .premium-card { padding: 24px; border-radius: 20px; }   /* <p>Privacy Policy</p> */ 
+            .premium-card { padding: 24px; border-radius: 20px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <h1>Privacy Policy</h1>
-       
-        <span class="effective-date">Effective: March 2026</span>
-    </header>
+    <div class="nav-header">
+        <header>
+            <h1>Privacy Policy</h1>
+            <span class="effective-date">Effective: March 2026</span>
+        </header>
+        <a href="https://elibtools.github.io/site/index.html" class="home-btn">
+            <i class="fas fa-home"></i> Home
+        </a>
+    </div>
 
     <div class="info-card">
         <div class="info-row"><span>Application</span><span>elib PDF</span></div>
-        <div class="info-row"><span>Developer</span><span>e Library of Tools</span></div>
+        <div class="info-row"><span>Developer</span><span>Thurapsha Kaja K S</span></div>
         <div class="info-row"><span>Contact</span><span><a href="mailto:elibtools@gmail.com" class="link">elibtools@gmail.com</a></span></div>
     </div>
 
@@ -270,6 +313,10 @@
                 </div>
             </div>
     </div>
+
+    <footer>
+        &copy; 2026 elibtools. All rights reserved.
+    </footer>
 </div>
 
 </body>
