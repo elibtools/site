@@ -5,64 +5,373 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>elib PDF | Offline Document Toolkit</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .glass-card:hover {
-            background: rgba(255, 255, 255, 0.07);
-            transform: translateY(-5px);
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        .icon-box {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
         }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-200 font-sans">
+<body class="bg-slate-950 text-slate-200 font-sans selection:bg-blue-500/30">
 
     <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
         <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-blue-500/20">E</div>
-            <span class="text-xl font-bold tracking-tight text-white">elib PDF</span>
+            <div class="w-10 h-10 icon-box rounded-xl flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-blue-500/20">E</div>
+            <span class="text-xl font-bold tracking-tight text-white">elib <span class="text-blue-500">PDF</span></span>
         </div>
         <div class="space-x-4 hidden md:flex items-center">
-            <a href="https://elibtools.github.io/site/terms.html" class="text-sm border border-slate-700 hover:border-blue-500 px-3 py-2 rounded-lg transition">Terms</a>
-            <a href="https://elibtools.github.io/site/privacy.html" class="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-blue-600/20">Privacy Policy</a>
+            <a href="https://elibtools.github.io/site/terms.html" class="text-sm text-slate-400 hover:text-white transition">Terms</a>
+            <a href="https://elibtools.github.io/site/privacy.html" class="text-sm bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl transition shadow-lg shadow-blue-600/20">Privacy Policy</a>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 py-16 text-center">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6">
-            Professional PDF Tools <br><span class="text-blue-500">100% Offline.</span>
+    <header class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <div class="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wide text-blue-400 uppercase bg-blue-500/10 rounded-full border border-blue-500/20">
+            Privacy-First Document Handling
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight">
+            Professional PDF Tools <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">100% Offline.</span>
         </h1>
-        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
-            elib PDF is a powerful, all-in-one PDF and document toolkit designed to simplify everyday tasks. From basic file operations to advanced editing, it provides a smooth, offline-first experience with a balanced mix of free and premium features.
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+            elib PDF is a professional, all-in-one document toolkit designed for high-speed offline processing. From basic file merging to advanced metadata editing, it provides a secure, privacy-first experience for developers, researchers, and professionals.
         </p>
         <div class="flex justify-center">
-            <div class="bg-slate-800 border border-slate-700 px-8 py-4 rounded-2xl flex items-center space-x-3 grayscale opacity-70">
-                <i class="fab fa-google-play text-2xl"></i>
+            <div class="bg-slate-900/50 border border-slate-800 px-8 py-5 rounded-2xl flex items-center space-x-4 group cursor-not-allowed">
+                <i class="fab fa-google-play text-3xl text-slate-500 group-hover:text-blue-400 transition"></i>
                 <div class="text-left leading-tight">
-                    <span class="text-xs text-slate-500 block uppercase">Coming Soon to</span>
-                    <span class="font-bold text-white">Google Play</span>
+                    <span class="text-xs text-slate-500 block uppercase tracking-widest font-semibold">Coming Soon to</span>
+                    <span class="font-bold text-white text-lg">Google Play</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 pb-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass-card p-8 rounded-3xl"><h3 class="text-xl font-bold mb-4 text-white border-b border-slate-800 pb-2">🚀 About elib PDF</h3><ul class="text-sm text-slate-400 space-y-2"><li>elib PDF is a powerful, all-in-one PDF and document toolkit designed to simplify everyday tasks. From basic file operations to advanced editing, it provides a smooth, offline-first experience with a balanced mix of free and premium features.</li></ul></div>
-<div class="glass-card p-8 rounded-3xl"><h3 class="text-xl font-bold mb-4 text-white border-b border-slate-800 pb-2">⭐ Star Capabilities</h3><ul class="text-sm text-slate-400 space-y-2"><li>• Complete PDF Control: Merge, split, rearrange, rotate, and manage pages with ease.</li><li>• Secure File Handling: Lock and unlock PDFs to protect sensitive documents.</li><li>• Offline-First Experience: All core tools work directly on your device—no internet required.</li><li>• High-Quality Processing: Maintain original layout, text clarity, and image quality.</li><li>• Flexible Access: Use essential tools for free and unlock advanced features with premium options.</li></ul></div>
-<div class="glass-card p-8 rounded-3xl"><h3 class="text-xl font-bold mb-4 text-white border-b border-slate-800 pb-2">🧩 Key Features</h3><ul class="text-sm text-slate-400 space-y-2"><li>• PDF Merge & Split: Combine multiple PDFs or split them efficiently.</li><li>• Page Management: Rotate, remove, reorder, or insert blank pages seamlessly.</li><li>• Advanced Editing: Crop pages and use enhanced editing tools (PDF Editor+).</li><li>• Image & PDF Tools: Convert images to PDF and extract images from PDFs.</li><li>• Text Tools: Convert text to PDF and extract text from documents.</li><li>• Metadata Control: View and edit document details like title, author, and keywords.</li><li>• Watermark & Layout: Add watermarks, headers, footers, and page numbers.</li><li>• Compression: Reduce file size while maintaining good visual quality.</li></ul></div>
-<div class="glass-card p-8 rounded-3xl"><h3 class="text-xl font-bold mb-4 text-white border-b border-slate-800 pb-2">🔒 Premium & Upcoming Features</h3><ul class="text-sm text-slate-400 space-y-2"><li>• Premium Tools: Advanced editing, image editing, metadata editing, watermark customization, and more.</li><li>• Coming Soon: Page Collage, Book Creator, Bookmark Manager, and additional enhancements to expand your workflow.</li></ul></div>
-<div class="glass-card p-8 rounded-3xl"><h3 class="text-xl font-bold mb-4 text-white border-b border-slate-800 pb-2">🎯 Why Choose elib PDF?</h3><ul class="text-sm text-slate-400 space-y-2"><li>• Simple, fast, and efficient</li><li>• Designed for real-world productivity</li><li>• Regular updates with new tools and improvements</li></ul></div>
+    <main class="max-w-6xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+        <div class="glass-card p-6 md:p-8 rounded-[2rem] flex flex-col h-full border border-white/5 shadow-2xl">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-circle-dot text-xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-white tracking-tight">🚀 About elib PDF</h3>
+            </div>
+            <ul class="space-y-2 flex-grow">
+                
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-tags text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">elib PDF is a professional, all-in-one document toolkit designed for high-speed offline processing. From basic file merging to advanced metadata editing, it provides a secure, privacy-first experience for developers, researchers, and professionals.</span>
+        
+    </li>
+            </ul>
+        </div>
+
+        <div class="glass-card p-6 md:p-8 rounded-[2rem] flex flex-col h-full border border-white/5 shadow-2xl">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-star text-xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-white tracking-tight">⭐ Star Capabilities</h3>
+            </div>
+            <ul class="space-y-2 flex-grow">
+                
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-circle-dot text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Complete PDF Control</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-circle-dot text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Secure File Handling</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-circle-dot text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Offline-First Experience</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-circle-dot text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">High-Quality Processing</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-gem text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Premium Power</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">Pro</span>
+    </li>
+            </ul>
+        </div>
+
+        <div class="glass-card p-6 md:p-8 rounded-[2rem] flex flex-col h-full border border-white/5 shadow-2xl">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-shapes text-xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-white tracking-tight">🧩 Key Features</h3>
+            </div>
+            <ul class="space-y-2 flex-grow">
+                
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-layer-group text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Merge PDF</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-scissors text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Split PDF</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-lock text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Lock PDF</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-lock text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Unlock PDF</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-rotate text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Rotate Pages</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-arrow-down-z-a text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Rearrange Pages</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-trash-can text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Remove Pages</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-file-circle-plus text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Add Blank Pages</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-file-image text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Image to PDF</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-image text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">PDF to Image</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-file-lines text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Text to PDF</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-font text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">PDF to Text</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-window-maximize text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Header & Footer</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-list-ol text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">PDF Page Number</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-tags text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">PDF Metadata</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-file-zipper text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Compress PDF</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+            </ul>
+        </div>
+
+        <div class="glass-card p-6 md:p-8 rounded-[2rem] flex flex-col h-full border border-white/5 shadow-2xl">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-gem text-xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-white tracking-tight">🔒 Premium & Upcoming Features</h3>
+            </div>
+            <ul class="space-y-2 flex-grow">
+                
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-crop-simple text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Crop Pages</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">Pro</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-pen-nib text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">PDF Editor+</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">Pro</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-pen-nib text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Image Editor+</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">Pro</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-tags text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Metadata Editor</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">Pro</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-stamp text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">PDF Watermark</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">Pro</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-table-cells text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Page Collage</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-md border border-blue-400/20">Soon</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-droplet text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Carbon Black Engine</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-md border border-blue-400/20">Soon</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-book-open text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Book Creator</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-md border border-blue-400/20">Soon</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-bookmark text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Bookmark Manager</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-md border border-blue-400/20">Soon</span>
+    </li>
+            </ul>
+        </div>
+
+        <div class="glass-card p-6 md:p-8 rounded-[2rem] flex flex-col h-full border border-white/5 shadow-2xl">
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-circle-check text-xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-white tracking-tight">🎯 Why Choose elib PDF?</h3>
+            </div>
+            <ul class="space-y-2 flex-grow">
+                
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-circle-dot text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Zero Data Tracking</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-circle-dot text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Lighting Fast Build</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-circle-dot text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Native Android Performance</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+    <li class="flex items-center space-x-3 p-2 rounded-xl hover:bg-white/5 transition-colors group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+            <i class="fas fa-circle-dot text-xs text-slate-400 group-hover:text-white"></i>
+        </div>
+        <span class="text-slate-300 font-medium">Simple UI/UX</span>
+        <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Free</span>
+    </li>
+            </ul>
+        </div>
         </div>
     </main>
 
-    <footer class="p-10 text-center border-t border-slate-800">
-        <p class="text-slate-500 text-sm mb-2">© 2026 elibtools - Developed by Thurapsha Kaja K S</p>
-        <p class="text-xs text-slate-600 italic">Built with passion in Tamil Nadu.</p>
+    <footer class="py-12 text-center border-t border-slate-900">
+        <p class="text-slate-400 font-medium mb-2">© 2026 elibtools</p>
+        <p class="text-sm text-slate-500">Developed by <span class="text-blue-400">Thurapsha Kaja K S</span></p>
+        <p class="text-xs text-slate-600 mt-4 italic">Built with passion in Tamil Nadu.</p>
     </footer>
 
 </body>
