@@ -19,21 +19,32 @@
             border-color: rgba(59, 130, 246, 0.5);
             transform: translateY(-8px);
         }
+        .contact-pill {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .contact-pill:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: white;
+        }
     </style>
 </head>
 <body class="text-slate-300 font-sans selection:bg-blue-500/30">
 
     <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="text-2xl font-black text-white tracking-tighter">
+        <a href="https://elibtools.github.io/site/index.html" class="text-2xl font-black text-white tracking-tighter hover:opacity-80 transition">
             elib<span class="text-blue-500">tools</span>
-        </div>
+        </a>
         <div class="hidden md:flex space-x-8 text-sm font-medium">
             <a href="https://www.linkedin.com/company/elibtools" class="hover:text-white transition">LinkedIn</a>
             <a href="https://whatsapp.com/channel/0029Vb7o9GpDTkKDBLPWZK2B/111" class="hover:text-white transition">WhatsApp</a>
+            <a href="mailto:elibtools@gmail.com" class="hover:text-white transition">Contact</a>
         </div>
     </nav>
 
-    <header class="py-24 px-6 text-center">
+    <header class="pt-24 pb-16 px-6 text-center">
         <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight">
             Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Product Suite.</span>
         </h1>
@@ -42,7 +53,7 @@
         </p>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 pb-32">
+    <main class="max-w-6xl mx-auto px-6 mb-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             <div class="glass-card p-8 rounded-[2.5rem] flex flex-col border border-white/5 shadow-2xl">
@@ -99,6 +110,32 @@
 
         </div>
     </main>
+
+    <section class="max-w-4xl mx-auto px-6 pb-32">
+        <div class="glass-card p-10 rounded-[3rem] text-center border border-white/10 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-600/20 blur-[100px]"></div>
+            
+            <h2 class="text-3xl font-black text-white mb-4">Get in Touch</h2>
+            <p class="text-slate-400 mb-10">Have questions or need support? Reach out to our official channels.</p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:elibtools@gmail.com" class="contact-pill flex items-center space-x-3 px-6 py-4 rounded-2xl">
+                    <i class="fas fa-envelope text-blue-400"></i>
+                    <span class="font-bold text-sm">elibtools@gmail.com</span>
+                </a>
+                
+                <a href="https://whatsapp.com/channel/0029Vb7o9GpDTkKDBLPWZK2B/111" target="_blank" class="contact-pill flex items-center space-x-3 px-6 py-4 rounded-2xl">
+                    <i class="fab fa-whatsapp text-green-400"></i>
+                    <span class="font-bold text-sm">WhatsApp Channel</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/company/elibtools" target="_blank" class="contact-pill flex items-center space-x-3 px-6 py-4 rounded-2xl">
+                    <i class="fab fa-linkedin-in text-blue-500"></i>
+                    <span class="font-bold text-sm">LinkedIn Page</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer class="py-12 text-center border-t border-slate-900">
         <p class="text-slate-500 text-sm">
